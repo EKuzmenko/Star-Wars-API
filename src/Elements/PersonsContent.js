@@ -93,10 +93,31 @@ function PersonsContent(props) {
           )
       } */
 
+  //вывод одного элемента по наименованию
+  /* if (data.count > 0) {
+    return (
+      <>
+        Name: {data?.results[0].name}<br />
+        Hight: {data?.results[0].height}<br />
+        Mass: {data?.results[0].mass}<br />
+        Hair color: {data?.results[0].hair_color}<br />
+        Skin color: {data?.results[0].skin_color}<br />
+        Eye color: {data?.results[0].eye_color}<br />
+        Birth year: {data?.results[0].birth_year}<br />
+        Gender: {data?.results[0].gender}<br />
+      </>
+    )
+  } else {
+    return (
+      <>
+        Такого героя нет.
+      </>
+    )
+  } */
   //вывод либо одного элемента по наименованию (если вбит в поиск) либо списка
 
   if (personName) {
-    /* if (data.count > 0) {
+    if (data.count > 0) {
       return (
         <>
           Name: {data?.results[0].name}<br />
@@ -115,8 +136,8 @@ function PersonsContent(props) {
           Такого героя нет.
         </>
       )
-    } */
-    console.log("Hello")
+    }
+
   } else {
 
     //для вывода списка элементов
@@ -125,26 +146,26 @@ function PersonsContent(props) {
       <>
         <div className="div_list">
           <ul>
-            {/* {list.map((el) => <li key={el.name}>
-              Name: {el.name}<br />
-              Hight: {el.height}<br />
-              Mass: {el.mass}<br /><br />
-            </li>)} */}
+
+            {list.map((el) => <li key={el.name}>
+                  Name: {el.name}<br />
+                  Hight: {el.height}<br />
+                  Mass: {el.mass}<br /><br />
+            </li>)}
           </ul>
         </div>
-
         {/* пагинация */}
-
-        {<div className="div_pagin">
+        <div className="div_pagin">
           <Pagination
             currentPage={page}
             totalPages={9}
             changeCurrentPage={setPage}
             theme="bottom-border"
           />
-        </div>}
+        </div>
       </>
     )
+
   }
 
 }
