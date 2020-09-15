@@ -1,0 +1,81 @@
+#root{
+  display: flex;
+}
+.menu{
+  width: 160px!important;
+  height: 100vh;
+  background-color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu a{
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(82, 82, 196);
+}
+
+.active{
+  background-color: rgb(192, 231, 85);
+}
+
+.ships-page{
+  display: flex;
+  flex-direction: column;
+}
+
+.ships-menu {
+  width: calc(100vw - 160px);
+  height: 50px;
+  background-color: burlywood;
+}
+
+.person-page{
+  display: flex;
+  flex-direction: column;
+}
+
+.person-menu {
+  width: calc(100vw - 160px);
+  height: 50px;
+  background-color: burlywood;
+}
+
+.planets-page{
+  display: flex;
+  flex-direction: column;
+}
+
+.planets-menu {
+  width: calc(100vw - 160px);
+  height: 50px;
+  background-color: burlywood;
+}
+.pagin{
+  width: 60px;
+  margin-left: 2px;
+}
+
+.div_pagin{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+}
+
+.bottom-border.pagination{
+  padding:0px;
+}
+
+.div_list ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column; 
+  flex-wrap: wrap;
+  height: calc(100vh - 130px);
+}
+
+.div_list li{
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
